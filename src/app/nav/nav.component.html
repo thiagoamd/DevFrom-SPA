@@ -1,21 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
+<div class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
 
   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
     data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
     aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
   <div class="d-flex justify-content-start">
-    <div class="p-1">      
-      <div  class="navbar-collapse collapse justify-content-left" id="navbarsExampleDefault">
-        <a class="navbar-brand" href="#">DevFrom</a>
+    <div class="p-1">
+      <div class="navbar-collapse collapse justify-content-left" id="navbarsExampleDefault">
+        <a class="navbar-brand" [routerLink]="['/home']">DevFrom</a>
         <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Matches</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/members']">Matches</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">List Devs</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/list']">List Devs</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Messages</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/messages']">Messages</a>
           </li>
         </ul>
       </div>
@@ -45,4 +45,4 @@
       </form>
     </div>
   </div>
-</nav>
+</div>
