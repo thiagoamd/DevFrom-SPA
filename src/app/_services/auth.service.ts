@@ -23,11 +23,11 @@ login(model: any) {
         localStorage.setItem('token', user.token);
         localStorage.setItem('name', user.name);
         this.decodedToken = this.jwtHelper.decodeToken(user.token);
-        console.log(this.decodedToken);
       }
     })
   );
 }
+
 
 register(model: any) {
   return this.http.post(this.baseUrl + 'register', model);
